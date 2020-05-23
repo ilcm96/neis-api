@@ -80,8 +80,8 @@
 ## 배포
 
 학교 코드는 거의 변하지 않는 반면 API 호출이 상당히 오래 걸리므로 [RedisJson](https://github.com/RedisJSON/RedisJSON)를 사용해 캐싱합니다.  
-
 fast-api 백엔드는 포함된 Dockerfile로, Redis는 [RedisJson 이미지](https://hub.docker.com/r/redislabs/rejson/)를 사용하거나 RedisJson 모듈을 [빌드](https://oss.redislabs.com/redisjson/#building-and-loading-the-module)해서 사용하면 됩니다.  
+
 RedisJson 세팅 후 `main.py`의 Redis [연결 부분](https://github.com/ilcm96/neis-api/blob/master/main.py#L9)을 수정하면 됩니다.  
 만약 캐싱 기간을 기본값인 1주일 보다 늘리고 싶다면 `schoolcode.py`와 `schoolmeal.py`의 `rj.expire` 부분을 수정하면 됩니다.
 
