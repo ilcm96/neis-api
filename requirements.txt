@@ -1,0 +1,4 @@
+aiohttp
+fastapi
+rejson
+requests
